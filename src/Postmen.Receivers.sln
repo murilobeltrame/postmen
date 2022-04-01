@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "receivers", "receivers", "{8F185C17-E49C-453E-9EF4-62A2C4FFDB43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Receiver.Console.Core", "receivers\Postmen.Receiver.Console.Core\Postmen.Receiver.Console.Core.csproj", "{B456F5BA-6580-4FE0-B141-619EABA39B1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen_Receiver_Functions", "receivers\Postmen.Receiver.Functions\Postmen_Receiver_Functions.csproj", "{E90553CC-6B81-477B-AF42-3B27EB962077}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{8E7674EE-D5B1-443B-BBF4-6013664AC2C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Infrastructure", "shared\Postmen.Infrastructure\Postmen.Infrastructure.csproj", "{13B3602D-A691-496E-88EB-061FBBF0DC06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Receiver.Application", "shared\Postmen.Receiver.Application\Postmen.Receiver.Application.csproj", "{AE511D34-568E-4C15-A9CD-DFB4A42B04BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B456F5BA-6580-4FE0-B141-619EABA39B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B456F5BA-6580-4FE0-B141-619EABA39B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B456F5BA-6580-4FE0-B141-619EABA39B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B456F5BA-6580-4FE0-B141-619EABA39B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90553CC-6B81-477B-AF42-3B27EB962077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90553CC-6B81-477B-AF42-3B27EB962077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90553CC-6B81-477B-AF42-3B27EB962077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90553CC-6B81-477B-AF42-3B27EB962077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13B3602D-A691-496E-88EB-061FBBF0DC06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B3602D-A691-496E-88EB-061FBBF0DC06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B3602D-A691-496E-88EB-061FBBF0DC06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B3602D-A691-496E-88EB-061FBBF0DC06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE511D34-568E-4C15-A9CD-DFB4A42B04BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE511D34-568E-4C15-A9CD-DFB4A42B04BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE511D34-568E-4C15-A9CD-DFB4A42B04BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE511D34-568E-4C15-A9CD-DFB4A42B04BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B456F5BA-6580-4FE0-B141-619EABA39B1F} = {8F185C17-E49C-453E-9EF4-62A2C4FFDB43}
+		{E90553CC-6B81-477B-AF42-3B27EB962077} = {8F185C17-E49C-453E-9EF4-62A2C4FFDB43}
+		{13B3602D-A691-496E-88EB-061FBBF0DC06} = {8E7674EE-D5B1-443B-BBF4-6013664AC2C6}
+		{AE511D34-568E-4C15-A9CD-DFB4A42B04BB} = {8E7674EE-D5B1-443B-BBF4-6013664AC2C6}
+	EndGlobalSection
+EndGlobal
