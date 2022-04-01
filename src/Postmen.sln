@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Receiver.Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Sender.Application", "shared\Postmen.Sender.Application\Postmen.Sender.Application.csproj", "{496DE41A-298A-461A-B807-8701B26952B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Domain", "shared\Postmen.Domain\Postmen.Domain.csproj", "{7EC23148-C9EE-4DF6-A530-FADE32AE6F59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{496DE41A-298A-461A-B807-8701B26952B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{496DE41A-298A-461A-B807-8701B26952B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{496DE41A-298A-461A-B807-8701B26952B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC23148-C9EE-4DF6-A530-FADE32AE6F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC23148-C9EE-4DF6-A530-FADE32AE6F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC23148-C9EE-4DF6-A530-FADE32AE6F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC23148-C9EE-4DF6-A530-FADE32AE6F59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3632E814-A8EB-4B3D-83BB-1BE4C9D99604} = {D4E0F049-5C60-4219-ABDE-7B68DA6A5D9D}
@@ -76,5 +82,6 @@ Global
 		{5AE755A5-667F-4231-83AE-99AA5453F221} = {43F26BEA-52EC-4CCD-9ED0-EB76659FB7FA}
 		{42A06653-744E-4F53-AD88-562160941C56} = {43F26BEA-52EC-4CCD-9ED0-EB76659FB7FA}
 		{496DE41A-298A-461A-B807-8701B26952B7} = {43F26BEA-52EC-4CCD-9ED0-EB76659FB7FA}
+		{7EC23148-C9EE-4DF6-A530-FADE32AE6F59} = {43F26BEA-52EC-4CCD-9ED0-EB76659FB7FA}
 	EndGlobalSection
 EndGlobal
