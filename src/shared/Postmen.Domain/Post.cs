@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Postmen.Domain.Abstractions;
+using System;
 
 namespace Postmen.Domain
 {
-    public class Post
+    public class Post: JsonSerializableEntity<Post>
     {
         public string Description { get; private set; }
         public DateTime? DueDateTime { get; private set; }

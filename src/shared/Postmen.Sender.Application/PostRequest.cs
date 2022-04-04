@@ -1,4 +1,5 @@
-﻿using Postmen.Domain;
+﻿using Newtonsoft.Json;
+using Postmen.Domain;
 using System;
 
 namespace Postmen.Sender.Application
@@ -8,9 +9,14 @@ namespace Postmen.Sender.Application
         public string Description { get; set; }
         public DateTime? DueDateTime { get; set; }
 
-        internal Post ToEntity()
+        public Post ToEntity()
         {
             return new Post(Description, false, DueDateTime);
+        }
+
+        public static PostRequest FromJson(string json)
+        {
+            return JsonConvert.DeserializeObject<PostRequest>(json);
         }
     }
 }

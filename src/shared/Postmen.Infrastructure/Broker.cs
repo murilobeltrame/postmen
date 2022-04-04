@@ -1,5 +1,5 @@
 ﻿using Azure.Messaging.ServiceBus;
-using Newtonsoft.Json;
+using Postmen.Domain.Abstractions;
 using Postmen.Domain.Interfaces;
 using System;
 using System.Threading;
@@ -18,27 +18,26 @@ namespace Postmen.Infrastructure
             _client = new ServiceBusClient(connectionString);
         }
 
-        public async Task PublishAsync<T>(string topicName, T payload, CancellationToken cancellationToken = default)
+        public async Task PublishAsync<T>(string topicName, T payload, CancellationToken cancellationToken = default) where T: JsonSerializableEntity<T>
         {
             if (string.IsNullOrWhiteSpace(topicName)) throw new ArgumentNullException(nameof(topicName));
-            if (payload != null) throw new ArgumentNullException(nameof(payload));
+            if (payload == null) throw new ArgumentNullException(nameof(payload));
 
             var sender = _client.CreateSender(topicName);
-            var messageJson = JsonConvert.SerializeObject(payload);
-            var message = new ServiceBusMessage(messageJson);
+            var message = new ServiceBusMessage(payload.ToJson());
             await sender.SendMessageAsync(message, cancellationToken);
         }
 
-        public async Task ReceiveAsync<T>(string topicName, string subscriptionName, Func<T, Task> handler, Func<Exception, Task> errorhandler = null, CancellationToken cancellationToken = default)
+        public async Task ReceiveAsync<T>(string topicName, string subscriptionName, Func<T, Task> handler, Func<Exception, Task> errorhandler = null, CancellationToken cancellationToken = default) where T : JsonSerializableEntity<T>
         {
             if (string.IsNullOrWhiteSpace(topicName)) throw new ArgumentNullException(nameof(topicName));
             if (string.IsNullOrWhiteSpace(subscriptionName)) throw new ArgumentNullException(nameof(subscriptionName));
-            if (handler != null) throw new ArgumentNullException(nameof(handler));
+            if (handler == null) throw new ArgumentNullException(nameof(handler));
 
             var processor = _client.CreateProcessor(topicName, subscriptionName);
             processor.ProcessMessageAsync += async args =>
             {
-                var payload = JsonConvert.DeserializeObject<T>(args.Message.Body.ToString());
+                var payload = JsonSerializableEntity<T>.FromJson(args.Message.Body.ToString());
                 await handler(payload);
                 await args.CompleteMessageAsync(args.Message);
             };
@@ -49,7 +48,7 @@ namespace Postmen.Infrastructure
             await processor.StartProcessingAsync();
         }
 
-        public async Task ReceiveAsync<T>(string topicName, string subscriptionName, Func<T, Task> handler, CancellationToken cancellationToken = default)
+        public async Task ReceiveAsync<T>(string topicName, string subscriptionName, Func<T, Task> handler, CancellationToken cancellationToken = default) where T : JsonSerializableEntity<T>
         {
             await ReceiveAsync(topicName, subscriptionName, handler, null, cancellationToken);
         }
