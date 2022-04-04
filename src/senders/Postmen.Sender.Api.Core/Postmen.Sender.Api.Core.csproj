@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\shared\Postmen.Infrastructure\Postmen.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\shared\Postmen.Sender.Application\Postmen.Sender.Application.csproj" />
+  </ItemGroup>
+
+
+</Project>
