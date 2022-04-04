@@ -5,27 +5,24 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "senders", "senders", "{88B9A84E-9929-4CA6-B642-86A2B6C592B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Sender.Api.Core", "senders\Postmen.Sender.Api.Core\Postmen.Sender.Api.Core.csproj", "{317AB686-BED6-429D-A48C-514CE6AB4C55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postmen.Sender.Api.Core", "senders\Postmen.Sender.Api.Core\Postmen.Sender.Api.Core.csproj", "{317AB686-BED6-429D-A48C-514CE6AB4C55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Sender.Console.Core", "senders\Postmen.Sender.Console.Core\Postmen.Sender.Console.Core.csproj", "{B8F3B9C9-894B-4781-BF85-97C1301DA4FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postmen.Sender.Console.Core", "senders\Postmen.Sender.Console.Core\Postmen.Sender.Console.Core.csproj", "{B8F3B9C9-894B-4781-BF85-97C1301DA4FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen_Sender_Functions", "senders\Postmen.Sender.Functions\Postmen_Sender_Functions.csproj", "{6E5CA282-2FD0-40AB-A693-3B44825EA4A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postmen_Sender_Functions", "senders\Postmen.Sender.Functions\Postmen_Sender_Functions.csproj", "{6E5CA282-2FD0-40AB-A693-3B44825EA4A1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{02550FFA-4E9E-42BC-8B7F-FB05F56842C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Infrastructure", "shared\Postmen.Infrastructure\Postmen.Infrastructure.csproj", "{C82AF2F7-C4EE-4837-B14D-7B23655A0747}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postmen.Infrastructure", "shared\Postmen.Infrastructure\Postmen.Infrastructure.csproj", "{C82AF2F7-C4EE-4837-B14D-7B23655A0747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Sender.Application", "shared\Postmen.Sender.Application\Postmen.Sender.Application.csproj", "{A856B48B-E0ED-482F-8E05-CCD2005E675F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postmen.Sender.Application", "shared\Postmen.Sender.Application\Postmen.Sender.Application.csproj", "{A856B48B-E0ED-482F-8E05-CCD2005E675F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Domain", "shared\Postmen.Domain\Postmen.Domain.csproj", "{9C557B17-F045-4AE1-B41D-685A25066A33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postmen.Domain", "shared\Postmen.Domain\Postmen.Domain.csproj", "{9C557B17-F045-4AE1-B41D-685A25066A33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{317AB686-BED6-429D-A48C-514CE6AB4C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -53,6 +50,9 @@ Global
 		{9C557B17-F045-4AE1-B41D-685A25066A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C557B17-F045-4AE1-B41D-685A25066A33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{317AB686-BED6-429D-A48C-514CE6AB4C55} = {88B9A84E-9929-4CA6-B642-86A2B6C592B0}
 		{B8F3B9C9-894B-4781-BF85-97C1301DA4FB} = {88B9A84E-9929-4CA6-B642-86A2B6C592B0}
@@ -60,5 +60,8 @@ Global
 		{C82AF2F7-C4EE-4837-B14D-7B23655A0747} = {02550FFA-4E9E-42BC-8B7F-FB05F56842C6}
 		{A856B48B-E0ED-482F-8E05-CCD2005E675F} = {02550FFA-4E9E-42BC-8B7F-FB05F56842C6}
 		{9C557B17-F045-4AE1-B41D-685A25066A33} = {02550FFA-4E9E-42BC-8B7F-FB05F56842C6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2067EC03-0BEC-4E41-AE5A-85C9D71DE308}
 	EndGlobalSection
 EndGlobal
