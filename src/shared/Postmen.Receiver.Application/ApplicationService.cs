@@ -14,7 +14,7 @@ namespace Postmen.Receiver.Application
         public ApplicationService(IBroker broker, string subscriptionName)
         {
             if (string.IsNullOrWhiteSpace(subscriptionName)) throw new ArgumentNullException(nameof(subscriptionName));
-            if (broker != null) throw new ArgumentNullException(nameof(broker));
+            if (broker == null) throw new ArgumentNullException(nameof(broker));
 
             _broker = broker;
             _subscriptionName = subscriptionName;
