@@ -1,12 +1,13 @@
 ﻿using Postmen.Domain;
 using Postmen.Domain.Interfaces;
+using Postmen.Receiver.Application.Interfaces;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Postmen.Receiver.Application
 {
-    public class ApplicationService
+    public class ApplicationService : IApplicationService
     {
         private readonly IBroker _broker;
         private readonly string _subscriptionName;
