@@ -34,12 +34,14 @@ namespace Postmen.Infrastructure
             if (string.IsNullOrWhiteSpace(subscriptionName)) throw new ArgumentNullException(nameof(subscriptionName));
             if (handler == null) throw new ArgumentNullException(nameof(handler));
 
-            var processor = _client.CreateProcessor(topicName, subscriptionName);
+            var processor = _client.CreateProcessor(topicName, subscriptionName, new ServiceBusProcessorOptions
+            {
+                AutoCompleteMessages = true
+            });
             processor.ProcessMessageAsync += async args =>
             {
                 var payload = JsonSerializableEntity<T>.FromJson(args.Message.Body.ToString());
                 await handler(payload);
-                await args.CompleteMessageAsync(args.Message);
             };
             if (errorhandler != null)
             {
