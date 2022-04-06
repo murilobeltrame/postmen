@@ -18,7 +18,7 @@ namespace Postmen.Receiver.Console.Core
                 .ConfigureServices((hostContext, services) => {
                     services
                         .AddHostedService<ConsoleHostedService>()
-                        .AddSingleton<IBroker, Broker>(s => new Broker(hostContext.Configuration.GetSection("ConnectionStrings:ServiceBus").Value)) // TODO: Configuration
+                        .AddSingleton<IBroker, Broker>(s => new Broker(hostContext.Configuration.GetSection("ConnectionStrings:ServiceBus").Value))
                         .AddSingleton<IApplicationService, ApplicationService>();
                 })
                 .RunConsoleAsync();

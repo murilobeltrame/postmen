@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Postmen.Sender.Console.Core": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

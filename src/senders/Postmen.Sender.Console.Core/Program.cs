@@ -1,12 +1,28 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Postmen.Domain.Interfaces;
+using Postmen.Infrastructure;
+using Postmen.Sender.Application;
+using Postmen.Sender.Application.Interfaces;
+using System.Threading.Tasks;
 
 namespace Postmen.Sender.Console.Core
 {
-    class Program
+    sealed class Program
     {
-        static void Main(string[] args)
+        private Program() { }
+
+        static async Task Main(string[] args)
         {
-            System.Console.WriteLine("Hello World!");
+            await Host
+                .CreateDefaultBuilder(args)
+                .ConfigureServices((hostContext, services) => {
+                    services
+                        .AddHostedService<ConsoleHostedService>()
+                        .AddSingleton<IBroker, Broker>(s => new Broker(hostContext.Configuration.GetSection("ConnectionStrings:ServiceBus").Value))
+                        .AddSingleton<IApplicationService, ApplicationService>();
+                })
+                .RunConsoleAsync();
         }
     }
 }
