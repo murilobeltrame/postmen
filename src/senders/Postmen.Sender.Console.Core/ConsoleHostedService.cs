@@ -39,7 +39,7 @@ namespace Postmen.Sender.Console.Core
                             System.Console.WriteLine("Type your message:");
                             var message = System.Console.ReadLine();
                             await _applicationService.PublishAsync(new Application.PostRequest { Description = message }, default);
-                            System.Console.WriteLine("Message sent...");
+                            _logger.LogInformation("Message sent...");
                         }
                     }
                     catch (Exception ex)

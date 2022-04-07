@@ -34,7 +34,6 @@ namespace Postmen.Receiver.Console.Core
                 {
                     try
                     {
-                        _logger.LogInformation("Hello World!");
                         await _applicationService.Listen(async post =>
                         {
                             _logger.LogInformation("Received post {0}", post);
