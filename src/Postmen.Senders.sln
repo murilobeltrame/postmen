@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Postmen.Domain", "shared\Po
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Sender.Console.Framework", "senders\Postmen.Sender.Console.Framework\Postmen.Sender.Console.Framework.csproj", "{4E49C929-0660-4B37-91E9-41534AED20A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Postmen.Sender.Api.Framework", "senders\Postmen.Sender.Api.Framework\Postmen.Sender.Api.Framework.csproj", "{C650ABE5-B305-47B7-84CF-F29930EA8634}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{4E49C929-0660-4B37-91E9-41534AED20A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E49C929-0660-4B37-91E9-41534AED20A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E49C929-0660-4B37-91E9-41534AED20A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C650ABE5-B305-47B7-84CF-F29930EA8634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C650ABE5-B305-47B7-84CF-F29930EA8634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C650ABE5-B305-47B7-84CF-F29930EA8634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C650ABE5-B305-47B7-84CF-F29930EA8634}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{A856B48B-E0ED-482F-8E05-CCD2005E675F} = {02550FFA-4E9E-42BC-8B7F-FB05F56842C6}
 		{9C557B17-F045-4AE1-B41D-685A25066A33} = {02550FFA-4E9E-42BC-8B7F-FB05F56842C6}
 		{4E49C929-0660-4B37-91E9-41534AED20A9} = {88B9A84E-9929-4CA6-B642-86A2B6C592B0}
+		{C650ABE5-B305-47B7-84CF-F29930EA8634} = {88B9A84E-9929-4CA6-B642-86A2B6C592B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2067EC03-0BEC-4E41-AE5A-85C9D71DE308}
