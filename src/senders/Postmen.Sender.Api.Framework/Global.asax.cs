@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Autofac.Integration.Mvc;
+using Autofac.Integration.WebApi;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -13,6 +11,10 @@ namespace Postmen.Sender.Api.Framework
     {
         protected void Application_Start()
         {
+            var container = ApplicationDependencyResolver.Container();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(container);
+
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
